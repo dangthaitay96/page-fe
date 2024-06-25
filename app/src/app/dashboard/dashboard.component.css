@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.categories {
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+.categories h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #333;
+}
+
+.category-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.category {
+  text-align: center;
+  margin: 20px;
+  flex: 0 1 18%; /* Flex item will take 18% of the width */
+  box-sizing: border-box;
+}
+
+.category img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.category span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.pagination-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination button {
+  background-color: #009879;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination span.active {
+  background-color: #009879;
+  color: white;
+}

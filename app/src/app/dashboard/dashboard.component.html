@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Course Platform</title>
+  <link rel="" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="https://via.placeholder.com/100x50" alt="Logo">
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm khóa học, giảng viên bạn quan tâm">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="user-actions">
+      <button>Đăng nhập</button>
+      <button>Đăng ký</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <img src="https://via.placeholder.com/800x200" alt="Banner" class="banner-image">
+    <h1>Nâng tầm bản thân</h1>
+
+    <div class="stats">
+      <span>300,000+ học viên</span>
+      <span>1000+ khóa học</span>
+      <span>500+ giảng viên</span>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="container">
+    <h2>Hôm nay bạn muốn học gì?</h2>
+    <div class="category-list">
+      <div class="category" *ngFor="let course of dataSource; let i = index">
+        <img [src]="images[course.id]" [alt]="course.name">
+        <span>{{ course.name }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pagination-container">
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="pageIndex === 1">Previous</button>
+    <span *ngFor="let page of pages" (click)="goToPage(page)" [class.active]="page === pageIndex">{{ page }}</span>
+    <button (click)="nextPage()" [disabled]="pageIndex === totalPages">Next</button>
+  </div>
+</div>
+</body>
+</html>
